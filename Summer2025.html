@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Summer 2025</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+         .hero-section {
+            color: white;
+            padding-top: 2rem !important;
+        }
+        
+        .btn-subscribe {
+            background-color: #ffffff;
+            color: rgb(20, 20, 20);
+            padding: 8px 20px;
+            font-weight: 650;
+            transition: all 0.3s ease;
+            border: 1px solid #fd9800;
+            border-radius: 0%;
+        }
+        
+        .btn-subscribe:hover {
+            background-color: #e68a00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(253, 152, 0, 0.3);
+        }
+
+        .social-icons a{
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons i{
+            color: #101010;
+        }
+
+        .social-icons a i:hover{
+            color: #fd9800 !important;
+            transform: scale(1.3);
+            transition: all 0.3s ease;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1)
+        }
+
+        nav{
+            background-color: #f2f0f0;
+        }
+
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #fd9800;
+            transform: translateY(-2px);
+        }
+
+        .full-width-carousel {
+            width: 100vw;
+            position: relative;
+        }
+        
+        .carousel-item {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        
+        .image-card {
+            position: relative; 
+            height: 450px;
+            margin: 0 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        .carousel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .text-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+        }
+        
+        .image-card .date-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(57, 57, 57, 0.7);
+            color: white;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        
+        .carousel-control-prev, 
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .carousel-control-prev {
+            left: 10px;
+        }
+        
+        .carousel-control-next {
+            right: 10px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            color: #333; 
+            background-color: #333;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        #activities{
+            margin-top: 50px;
+        }
+
+        .card img{
+            border: none !important;
+        }
+
+        .card-body{
+            padding: 30px;
+        }
+        
+        .card-body p{
+            text-align: center;
+        }
+
+        .adjustTOP{
+            bottom: 150px;
+        }
+
+        .sidebar-widget {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .quotes{
+            background-color: #edecec;
+        }
+
+        .quote-mark {
+            font-size: 5rem;
+            color: #fd9800;
+            line-height: 0.5; 
+            vertical-align: middle;
+            margin: 0 5px; 
+        }
+        
+        footer .social-links a i, .social-links a i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #d3d3d3;
+            color: #2d2d2d;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            color: #fd9800;
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 60%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 600px;
+            object-fit: contain;
+            z-index: 10;
+        }
+
+        .read-more:hover {
+            background-color: #fd9800;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(253, 152, 0, 0.3);
+            text-decoration: none;
+            color:white;
+        }
+
+        .read-more {
+            background-color: #ffffff;
+            color: rgb(20, 20, 20);
+            padding: 8px 20px;
+            font-weight: 650;
+            transition: all 0.3s ease;
+            border: 1px solid #fd9800;
+            border-radius: 0%;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="d-flex justify-content-between w-100"> 
+                <button class="navbar-toggler order-lg-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#activities">Activities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="midterms/Portfolio.html">Portfolio</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <header class="hero-section position-relative">
+            <div class="container py-5">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="header-left">
+                        <button class="btn btn-subscribe">SUBSCRIBE</button>
+                    </div>
+
+                    <div class="text-center pt-3" >
+                        <h1 class="display-6 fw-bold">
+                            <span style="color: #fd9800;">Summer 2025</span><br>
+                            <span style="color: black">Code, Creativity & Chords</span>
+                        </h1>  
+                    </div>
+
+                    <div class="header-right">
+                        <div class="social-icons">
+                            <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-instagram" ></i></a>
+                            <a href="#" class="text-white"><i class="fas fa-envelope" ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="full-width-carousel">
+            <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <!-- Card 1 -->
+                            <div class="image-card">
+                                <img src="summer_img/bangus_fest.jpg" class="carousel-img" alt="Bangus festival">
+                                <div class="date-badge">
+                                    <div class="fw-bold fs-5">30</div>
+                                    <div class="text-uppercase">APR</div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h4>BANGUS FESTIVAL</h4>
+                                    <p class="mb-0">Hanging out with the bois, watching concerts, playing arcades games in the mall, eating bangus and watching the fireworks at the end!</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="image-card">
+                                <img src="summer_img/working.jpg" class="carousel-img" alt="Working with the bois">
+                                <div class="date-badge">
+                                    <div class="fw-bold fs-5">07</div>
+                                    <div class="text-uppercase" >APR</div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h4>FINALS GRIND BEFORE SUMMER CLASS</h4>
+                                    <p class="mb-0">Its already summer but we still got many things to do. We also need to attend our mandatory summer classes. [Rest? what even is that]</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="image-card">
+                                <img src="summer_img/hutao.jpg" class="carousel-img" alt="Hutao sketch">
+                                <div class="date-badge">
+                                    <div class="fw-bold fs-5">22</div>
+                                    <div class="text-uppercase">AUG</div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h4>EMOTIONAL SUPPORT HUTAO</h4>
+                                    <p class="mb-0">Clean whiteboard, a marker, and boredom. Together, we drew a HuTao that can eliminate boredom!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <!-- Card 4 -->
+                            <div class="image-card">
+                                <img src="summer_img/coding_grind.jpg" class="carousel-img" alt="Coffee and code">
+                                <div class="date-badge">
+                                    <div class="fw-bold fs-5">28</div>
+                                    <div class="text-uppercase">MAY</div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h4>COFFEE AND CODE</h4>
+                                    <p class="mb-0">With the power of code, coffee and spotify on my side, I am unstoppable!</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 5 -->
+                            <div class="image-card">
+                                <img src="summer_img/FALLTUCK.jpg" class="carousel-img" alt="The bois">
+                                <div class="date-badge">
+                                    <div class="fw-bold fs-5">07</div>
+                                    <div class="text-uppercase">MAY</div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h4>THE BOIS</h4>
+                                    <p class="mb-0">Mandatory summer class? We'll get through this with passion and determination! Here we come. </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 6 -->
+                            <div class="image-card">
+                                <img src="summer_img/fun_run.jpg" class="carousel-img" alt="Summer activity">
+                                <div class="date-badge">
+                                    <div class="fw-bold fs-5">??</div>
+                                    <div class="text-uppercase">MAY</div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h4>"FUN" RUN</h4>
+                                    <p class="mb-0">Too tired to run, to many activities to think, and too sleep deprived to even do this but its fun when your with the bois!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <!-- Card 7 -->
+                            <div class="image-card">
+                                <img src="summer_img/Chilling.jpg" class="carousel-img" alt="Chilling and watching">
+                                <div class="date-badge">
+                                    <div class="fw-bold fs-5">15</div>
+                                    <div class="text-uppercase">MAY</div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h4>CHILL, EAT, WATCH</h4>
+                                    <p class="mb-0">Eating delicious food while watching until then gameplay in youtube is peak relaxation combo.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 8 -->
+                            <div class="image-card">
+                                <img src="summer_img/HQ_hangout.jpg" class="carousel-img" alt="Hangout with the bois">
+                                <div class="date-badge">
+                                    <div class="fw-bold fs-5">19</div>
+                                    <div class="text-uppercase">MAY</div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h4>HANGING OUT WITH THE BOIS</h4>
+                                    <p class="mb-0">HQ Cafe is the best place to hangout or do work with the bois perfect for grinding games and work. [Not sponsored]</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 9 -->
+                            <div class="image-card">
+                                <img src="summer_img/GraphicArts_bootcamp.jpg" class="carousel-img" alt="coding and arts">
+                                <div class="date-badge">
+                                    <div class="fw-bold fs-5">02</div>
+                                    <div class="text-uppercase">JUN</div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h4>FINAL SUMMER GRINDS</h4>
+                                    <p class="mb-0">We are almost done with the summer classes! just a little more graphic designing and web developing. We are on our way to our 3rd year in computer science. [Unfortunately, we only have a small week break. Its the enrollment week]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" style="margin-top: 200px;">
+        <hr>
+        <div class="container">
+            <h2 class="text-center mb-4">Summer Activities</h2>
+            <!-- ROW 1 --> 
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 no-border">
+                        <img src="summer_img/drawing_pad.jpg" class="card-img-top" alt="drawing pad img">
+                        <div class="card-body no-border">
+                            <h5 class="card-title text-center" style="font-size:x-large;"><span class="card-title text-center" style="color: #fd9800; font-size:medium;">Drawing Tablet <span style="color: #cccbcb;">|</span> Digital Art</span>
+                                <br>The Start Of My Digital Art Journey</h5><br>
+                            <p class="card-text text-start">I finally got a drawing pad! I’ve always wanted to learn digital art, but until now, I’ve only done traditional sketches in my sketchpad or doodled on my phone with drawing apps. 
+                                With this new drawing tablet, I can finally create high-quality digital artwork!   
+                                The timing couldn’t be better—I’m taking a graphic arts class this semester, so I’ll have the perfect opportunity to practice and refine my skills.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 no-border">
+                        <div class="card-body border quotes">
+                            <span class="quote-mark">&ldquo;</span>
+                            <h5 class="card-title text-center">Why This Summer Mattered?</h5>
+                            <p class="card-text">"Balancing logic and creativity taught me that coding is poetry, and art is algorithm—both need structure, heart, and a touch of rebellion.</p>
+                            <p style="color: #fd9800; text-align: right;"><b>Wency Flores</b></p>
+                        </div>
+                        <br>
+                        <img src="summer_img/webdev.jpg" class="card-img-top" alt="Digital Art img">
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 no-border">
+                        <img src="summer_img/guitar.jpg" class="card-img-top" alt="Broken string guitar img">
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="font-size:x-large;"><span class="card-title text-center" style="color: #fd9800; font-size:medium;">Electric Guitar <span style="color: #cccbcb;">|</span> JRock & OPM </span>
+                                <br>My First Electric Guitar </h5><br>
+                            <p class="card-text text-start">
+                                I've always wanted an electric guitar to play my favorite rock songs, especially anime songs.
+                                Now that I have it, I immediately started playing it and learn songs like: Bocchi the Rock songs, K-on songs, some OPM and my guitar idol Pusu from TUYU [A japanese rock band]. 
+                                TUYU's music have fast pace hard playstyle which resulted to me often breaking my strings while practicing. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- ROW 2 --> 
+            <div class="row">
+                <div class="col-md-4 mb-4 adjustTOP">
+                    <div class="card border-0 no-border">
+                        <img src="summer_img/sketch.png" class="card-img-top" alt="sketch" style="padding-bottom: 23px;">
+                        <img src="summer_img/Drawing.png" class="card-img-top" alt="Genshin fanart">
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 no-border">
+                        <div class="card-body quotes">
+                            <span class="quote-mark">&ldquo;</span>
+                            <p class="card-text text-start" style="font-size: large;">
+                               This summer, I got serious about three things: digital art, guitar, and coding.
+                                At first, they felt like separate hobbies, but I started seeing connections.
+                                I’m still a beginner at all of them, but now I have projects—not just ideas. That’s progress.
+                            </p><br>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4 adjustTOP">
+                    <div class="card border-0 no-border">
+                        <img src="summer_img/electric.jpg" class="card-img-top" alt="guitar playing img" style="padding-bottom: 20px; height: 250px;">
+                        <img src="summer_img/gears.jpg" class="card-img-top" alt="guitar gears" style="height: 206px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <hr>
+        <main class="container my-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <article class="recent-post row mb-5">
+                        <div class="col-md-4">
+                        <img src="summer_img/profile.jpg" alt="Hiking photo" class="img-fluid mt-2" >
+                        </div>
+                        <div class="col-md-8">
+                            <p class="lead"><b>ABOUT ME</b></p>
+                            <h3 class="post-title">Hello! I am <span style="color:#fd9800">Wency Flores</span></h3>
+                            <p class="post-excerpt">As a front-end developer with an artistic edge, I bridge imagination and functionality through code. 
+                                Each project I build is a playground where precision meets creativity—whether it’s crafting intuitive interfaces or breathing life into static designs.
+                                <br><br>
+                                My approach? Code that’s as elegant as it is efficient, and designs that tell a story. When I’m not debugging or sketching wireframes, you’ll find me composing guitar melodies or drafting game narratives—proof that logic and artistry thrive together.
+                                <br>
+                            </p>
+                            <br>
+                            <a href="midterms/midterm.html" class="read-more">READ MORE</a>
+                    </article>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="sidebar-widget subscribe ps-lg-4">
+                        <h5>SUBSCRIBE</h5><br>
+                        <p>Subscribe to get updates on my summer adventures right to your inbox.</p>
+                        <form class="subscribe-form">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your email">
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="termsCheck">
+                            <label class="form-check-label" for="termsCheck" style="color: gray;">I agree to the terms & conditions</label>
+                        </div>
+                        <button class="btn btn-subscribe" style="background-color:#fd9800; padding-block: 8px; padding-inline: 25px; color: white; border-radius:0%;">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                    <div class="social-links social-icons mt-3">
+                        <p>FOLLOW ME</p>
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram" ></i></a>
+                        <a href="#" class="text-white"><i class="fas fa-envelope" ></i></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <footer class="text-center" style="background-color: #f3f1f1;">
+        <div class="position-relative">
+            <br>
+            <div class="d-flex flex-wrap gap-3">
+                <img src="summer_img/beach.jpg" class="img-fluid-" style="width:19%;height:350px;object-fit:cover">
+                <img src="summer_img/digital_art.jpg" class="img-fluid-" style="width:19%;height:350px;object-fit:cover">
+                <img src="summer_img/trio2.jpg" class="img-fluid-" style="width:19%;height:350px;object-fit:cover">
+                <img src="summer_img/ktv.jpg" class="img-fluid" style="width:19%;height:350px;object-fit:cover">
+                <img src="summer_img/watching.jpg" class="img-fluid" style="width:19%;height:350px;object-fit:cover">
+            </div>
+            <img src="summer_img/footer.png" class="overlay-image">
+        </div>
+
+        <div class="container" style="padding-right: 20%; padding-left: 20%;">
+            <br>
+            <br>
+            <br>
+            <h1 class="display-6 fw-bold">
+                <span style="color: #fd9800;">Summer 2025</span><br>
+                <span style="color: black">Code, Creativity & Chords</span>
+            </h1> 
+            <p class="footer-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+            </p>
+            <div class="social-links social-icons mt-4">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram" ></i></a>
+                <a href="#" class="text-white"><i class="fas fa-envelope" ></i></a>
+                <br><br>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
